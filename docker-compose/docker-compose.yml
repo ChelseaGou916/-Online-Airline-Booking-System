@@ -1,0 +1,39 @@
+version: '3'
+services:
+  mysql:
+    build: ./mysql
+    container_name: mysql
+    command: mysqld --character-set-server=utf8mb4 --collation-server=utf8mb4_bin
+    command: --init-file /docker-entrypoint-initdb.d/init.sql
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: Abc_123456
+      TZ: Asia/Shanghai
+      LANG: en_US.UTF-8
+    ports:
+      - 3306:3306
+    volumes:
+      - ./mysql/data/db:/var/lib/mysql
+      - ./mysql/conf/my.cnf:/etc/mysql/conf.d/my.cnf
+      - ./mysql/log:/var/log/mysql
+      - ./mysql/sql/init.sql:/docker-entrypoint-initdb.d/init.sql
+    healthcheck:
+      test: ["CMD","ping","-c","1","localhost:3306"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+  front: 
+    build: ./front
+    ports: 
+      - "8000:8000"
+  server:
+    build: ./server
+    ports:
+      - "3001:3001"
+    environment:
+      - HOSTNAMEMYSQL=mysql
+    restart: on-failure
+    depends_on:
+      - mysql
+    links:
+      - mysql
