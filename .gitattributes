@@ -1,0 +1,15 @@
+# JavaScript and JSX files
+*.js linguist-detectable=true
+*.jsx linguist-detectable=true
+
+# Node.js JSON files
+*.json linguist-detectable=true
+
+# Express (JavaScript) files
+*.mjs linguist-detectable=true
+
+# Nginx configuration files
+*.conf linguist-detectable=true
+
+# All other files will be treated as text
+* linguist-detectable=false
