@@ -1,6 +1,6 @@
 # Online-Airline-Booking-System
 docker compose up to run the project<br>
-<img width="415" alt="image" src="https://github.com/ChelseaGou916/Online-Airline-Booking-System/assets/70808379/c3a4faee-5009-4e50-a032-028316691560">
+<br><img width="415" alt="image" src="https://github.com/ChelseaGou916/Online-Airline-Booking-System/assets/70808379/c3a4faee-5009-4e50-a032-028316691560">
 <br><br><br>
 **1. The administrator**<br>
 Account: admin<br>
