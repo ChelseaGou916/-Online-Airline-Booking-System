@@ -1,19 +1,21 @@
-# JavaScript and JSX files
-*.js linguist-detectable=true
-*.jsx linguist-detectable=true
+# Set language type for JavaScript files
+*.js linguist-language=JavaScript
+*.jsx linguist-language=JavaScript
 
-# Node.js JSON files
-*.json linguist-detectable=true
+# Set language type for Node.js files
+*.json linguist-language=JSON
+*.mjs linguist-language=JavaScript
 
-# Express (JavaScript) files
-*.mjs linguist-detectable=true
+# Set language type for Express files
+*.js linguist-language=JavaScript
+*.jsx linguist-language=JavaScript
 
-# Nginx configuration files
-*.conf linguist-detectable=true
+# Set language type for Nginx configuration files
+*.conf linguist-language=Nginx
 
 # Other specific file types
-*.html linguist-detectable=true
-*.css linguist-detectable=true
+*.html linguist-language=HTML
+*.css linguist-language=CSS
 
-# All other files will be treated as text
-* linguist-detectable=false
+# All other files
+* linguist-language=JavaScript
